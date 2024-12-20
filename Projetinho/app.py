@@ -11,9 +11,9 @@ def enviar_dados():
     dados = request.json
     alertas = []
     if dados["CO2"] > LIMITE_CO2:
-        alertas.append("⚠️ CO2 acima do limite crítico!")
+        alertas.append("CO2 acima do limite crítico!")
     if dados["PM2.5"] > LIMITE_PM25:
-        alertas.append("⚠️ PM2.5 acima do limite crítico!")
+        alertas.append("PM2.5 acima do limite crítico!")
     
     return jsonify({
         "mensagem": "Dados recebidos com sucesso.",
